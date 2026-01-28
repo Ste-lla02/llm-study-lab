@@ -1,2 +1,72 @@
-# llm-study-lab
-This repository contains Jupyter notebooks and Python scripts for experimenting with different applications of generative models, with a particular focus on Large Language Models (LLMs). The contents include examples of using pre-trained models, prompting techniques, output analysis, and initial experiments on adapting models to specific tasks.
+# 🧠 Exploring Large Language Models
+
+![Studying LLMs](assets/cover.png)
+
+This repository is a **personal learning lab** dedicated to exploring **generative AI**, with a specific focus on **Large Language Models (LLMs)**.
+
+It collects **Jupyter notebooks and Python scripts** developed while studying, testing, and critically analyzing how modern generative models behave across different tasks and settings.
+
+---
+
+## 🎯 Goals
+
+The main goal of this repository is **understanding**, not optimization.
+
+Each experiment is designed to answer questions such as:
+- What does this model actually learn?
+- Why does a certain prompting strategy work (or fail)?
+- What are the limitations of a given approach?
+- How do different models behave on the same task?
+
+Rather than maximizing performance, the focus is on **interpretability, awareness, and hands-on experimentation**.
+
+---
+
+## 📂 Contents
+
+The repository may include:
+
+- 📓 **Jupyter notebooks** for interactive experiments  
+- 🐍 **Python scripts** for reusable components and pipelines  
+- ✍️ **Prompting experiments** (zero-shot, few-shot, structured prompts)  
+- 🔍 **Output analysis** and qualitative evaluation  
+- 🔧 **Initial adaptation experiments**, such as:
+  - prompt-based task specialization  
+  - lightweight fine-tuning or parameter-efficient approaches (when applicable)
+
+---
+
+## 🧪 Topics Covered (evolving)
+
+Examples of topics explored in this repo:
+- Text generation and analysis
+- Prompt engineering strategies
+- Model comparison on the same task
+- Failure cases and hallucinations
+- Task framing and instruction design
+- Early experiments on adapting models to specific tasks
+
+The repository is **incremental and exploratory by design**.
+
+---
+
+## ⚠️ Notes
+
+- This is **not** a production-ready codebase.
+- Notebooks may prioritize clarity over efficiency.
+- Results are discussed critically and may evolve over time.
+
+---
+
+## 📚 Background
+
+This repository accompanies a broader study of:
+- generative AI foundations,
+- transformer-based architectures,
+- and practical experimentation with modern LLM tooling.
+
+---
+
+## 🚀 Status
+
+🧩 Work in progress — continuously updated as new ideas, models, and questions emerge.
