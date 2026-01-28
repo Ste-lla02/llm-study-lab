@@ -1,6 +1,8 @@
-# 🧠 Exploring Large Language Models
+<h1 align="center">💻⭐ LLM Explorations</h1>
 
-![Studying LLMs](assets/cover.png)
+<p align="center">
+  <img src="assets/cover.png" alt="Studying LLMs" width="200"/>
+</p>
 
 This repository is a **personal learning lab** dedicated to exploring **generative AI**, with a specific focus on **Large Language Models (LLMs)**.
 
