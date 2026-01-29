@@ -52,11 +52,17 @@ The repository is **incremental and exploratory by design**.
 
 ---
 
-## ⚠️ Notes
+## 📎 Code Attribution & Learning Disclaimer
 
-- This is **not** a production-ready codebase.
-- Notebooks may prioritize clarity over efficiency.
-- Results are discussed critically and may evolve over time.
+This repository contains a mix of:
+- original code written by the author,
+- code adapted or reimplemented from external sources,
+- examples inspired by tutorials, documentation, books, and online resources used for learning purposes.
+
+Whenever external ideas or code snippets are used, the goal is not direct reuse, but **understanding, experimentation, and adaptation**.
+
+All content in this repository is part of an ongoing learning process and is shared for educational and exploratory purposes.
+
 
 ---
 
