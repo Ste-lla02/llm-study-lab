@@ -25,3 +25,14 @@ def fetch_website_links(url):
     soup = BeautifulSoup(response.content, "html.parser")
     links = [link.get("href") for link in soup.find_all("a")]
     return [link for link in links if link]
+
+class Website:
+
+    def __init__(self, url):
+        self.url = url
+        response = requests.get(url, headers=headers)
+        soup = BeautifulSoup(response.content, 'html.parser')
+        self.title = soup.title.string if soup.title else "No title found"
+        for irrelevant in soup.body(["script", "style", "img", "input"]):
+            irrelevant.decompose()
+        self.text = soup.body.get_text(separator="\n", strip=True)
