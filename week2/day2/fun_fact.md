@@ -68,8 +68,43 @@ This is especially useful for tasks where shallow pattern matching fails.
 
 ---
 
+#### Hybrid: one model, multiple operating regimes
+A hybrid model can switch between *fast conversational* mode and *slow reasoning* mode. The difference lies in inference configuration, not in having a completely separate model.
+Chat and reasoning models are hybrids because they combine:  
+- The conversational alignment of chat models.
+- The deliberate, multi-step inference behavior of reasoning models.
+
+---
+
+## Tasks 🏃🏽‍➡️
+
+Modern frontier LLMs show strong performance across a wide range of tasks:
+1. Information synthesis: combining multiple sources into a coherent, structured answer;
+2. Summarization: producing concise representations of long documents;
+3. Text generation: emails, reports, blog posts, documentation drafts;
+4. Code generation and debugging: writing, explaining, and refactoring code;
+5. Question answering: including domain-specific and technical topics;
+6. Language transformation: translation, rewriting, tone adaptation.
+
+---
+
+## Limitations 📵
+
+Despite their impressive performance, LLMs have structural *limitations*.
+### 1. Limited domain depth
+Although modern LLMs achieve strong performance across a wide range of tasks, they should be understood primarily as general-purpose models rather than true domain specialists. Their competence in narrow, highly technical, or research-level domains can be uneven, and apparent fluency does not guarantee correctness. In practice, an answer may sound authoritative and well-structured while still containing conceptual inaccuracies, especially when the domain requires deep expert knowledge or precise formal reasoning.
+### 2. Knowledge cutoff and recency
+
+LLMs are trained on static datasets, which implies a fixed knowledge cutoff. As a result, they do not have intrinsic awareness of recent events, newly published research, or rapidly evolving technologies. This limitation is particularly visible in technical contexts, where generated code examples may rely on outdated libraries, deprecated APIs, or obsolete best practices unless external tools or retrieval mechanisms are explicitly integrated.
+### 3. Confident mistakes
+
+A critical limitation of LLMs is their tendency to produce incorrect answers with high confidence. Errors are often subtle and may remain undetected without careful verification, especially in tasks involving mathematics, logic, or software development. This behavior is not a software defect, but a direct consequence of the underlying modeling paradigm: LLMs are optimized to generate plausible and coherent text, not to guarantee factual correctness or formal validity.
+
+---
+
 ## Note
 LLMs are best seen as:
 - Powerful reasoning assistants
 - Not autonomous decision-makers  
+
 Understanding which type of model you are using, for which task, and under which constraints is essential to use them responsibly and effectively.
