@@ -49,7 +49,25 @@ This distinction is crucial and often confusing for beginners.
 ---
 
 ## 🔍 Want to see tokens in action?
-We can inspect the [OpenAI tokenizer](https://platform.openai.com/tokenizer) and can see exactly how a piece of text is split into tokens and mapped to token IDs.
+We can inspect the [OpenAI tokenizer](https://platform.openai.com/tokenizer) and can see exactly how a piece of text is split into *tokens* and mapped to *token IDs*.
 This is a great hands-on way to understand what the model actually sees when you type a sentence.
 
+<p align="center">
+  <img src="assets/tokenizer.png" alt="openai_tokenizer" width="400"/>
+</p>
+
 ---
+
+## 🧪 Try this in the tokenizer
+Below are some example inputs you can paste into the [OpenAI tokenizer](https://platform.openai.com/tokenizer) 
+interface and observe carefully how they are split into tokens.
+
+### 1️⃣ Common words vs rare words
+```text
+This sentence contains only very common English words.
+```
+Most (or all) words are mapped one token per word. Now compare with:
+```text
+This sentence contains exquisitely handcrafted wizardry.
+```
+Here, less common words are split into **multiple subword tokens**, often reflecting meaningful fragments (stems, suffixes, endings).
