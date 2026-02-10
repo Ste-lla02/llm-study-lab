@@ -53,7 +53,7 @@ We can inspect the [OpenAI tokenizer](https://platform.openai.com/tokenizer) and
 This is a great hands-on way to understand what the model actually sees when you type a sentence.
 
 <p align="center">
-  <img src="assets/tokenizer.png" alt="openai_tokenizer" width="400"/>
+  <img src="/assets/tokenizer.png" alt="openai_tokenizer" width="400"/>
 </p>
 
 ---
@@ -71,3 +71,57 @@ Most (or all) words are mapped one token per word. Now compare with:
 This sentence contains exquisitely handcrafted wizardry.
 ```
 Here, less common words are split into **multiple subword tokens**, often reflecting meaningful fragments (stems, suffixes, endings).
+
+### 2️⃣ Beginning-of-word vs word fragments
+```text
+important
+```
+Compare with:
+```text
+not important
+```
+
+You will likely see that:
+- `" important"` (with a leading space) is a different token
+- `"important"` without a space is treated as a word fragment  
+
+This shows that tokens often encode both meaning and word boundaries, including whether a token starts a new word.
+
+### 3️⃣ Made-up or creative words
+```text
+LLM wizardcraft and promptmancy are powerful arts.
+```
+Invented or uncommon words are decomposed into familiar pieces.
+
+### 4️⃣ Numbers behave differently
+```text
+3.141592653589793
+```
+Notice how numbers are often split into fixed-size chunks, frequently groups of digits.
+This reveals that many tokenizers include dedicated tokens for common numeric patterns.
+
+Try also:
+```text
+2,71828 18284 59045 23536
+123456789
+2026
+615
+```
+
+### 5️⃣ Natural language vs code
+```text
+The model predicts the next token based on context.
+```
+```text
+for i in range(10):
+    total += values[i]
+```
+
+
+You will see that code consumes more tokens relative to its length:
+- variable names
+- symbols
+- indentation
+- uncommon identifiers  
+
+Code is denser and less predictable than natural language, so tokenization becomes finer-grained.
