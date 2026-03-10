@@ -30,6 +30,34 @@ Because of this, LLMs are very good at tasks such as:
 - explaining concepts
 - generating descriptions
 
+### 📜 Example datasets of human-written text
+
+Many datasets used in NLP research contain **human-written natural language**.  
+These datasets are often used to train or evaluate language models.
+
+Some well-known examples include:
+
+- **Project Gutenberg**  
+  A large collection of public domain books (novels, essays, historical texts).  
+  Often used to study long-form narrative language.
+
+- **Wikipedia Dumps**  
+  The full text of Wikipedia articles.  
+  Widely used because it contains structured, factual, human-written explanations.
+
+- **Common Crawl**  
+  A massive archive of web pages collected from across the internet.  
+  Many large language models are trained using filtered subsets of this dataset.
+
+- **BookCorpus**  
+  A dataset of unpublished novels used in the training of models such as BERT.
+
+- **OpenWebText**  
+  An open dataset created to approximate the web data used to train GPT-style models.
+
+These datasets provide **large volumes of natural human language**, which helps models learn grammar, vocabulary, reasoning patterns, and narrative structure. Indeed, because these datasets contain **human-written language**, LLMs learn patterns that make them particularly strong at understanding and generating natural text.
+
+
 ---
 
 # 2️⃣ Markdown
@@ -125,3 +153,14 @@ LLM response → convert back to JSON
 ```
 
 In this setup, **TOON acts as an interface format for interacting with the LLM**, while JSON remains the standard format used by the application.
+
+---
+
+## Further Reading 📚
+
+For a deeper explanation of TOON and its motivation for LLMs, see:
+
+1- [TOON: Bye-bye JSON for LLMs](https://medium.com/data-science-in-your-pocket/toon-bye-bye-json-for-llms-91e4fe521b14)
+
+
+2- [Beyond JSON](https://medium.com/@michael.hannecke/beyond-json-picking-the-right-format-for-llm-pipelines-b65f15f77f7d)
