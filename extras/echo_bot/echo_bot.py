@@ -37,11 +37,8 @@ bot = telebot.TeleBot(TELEGRAM_BOT_TOKEN, parse_mode=None)
 CSV_FILE_ID = None
 
 # File Upload
-def upload_csv_once() -> str:
+def upload_csv_once():
     global CSV_FILE_ID
-
-    if CSV_FILE_ID is not None:
-        return CSV_FILE_ID
 
     logger.info("Caricamento CSV...")
     with open(CSV_PATH, "rb") as f:
@@ -55,13 +52,7 @@ def upload_csv_once() -> str:
     return CSV_FILE_ID
 
 
-def parse_mode_and_prompt(user_text: str) -> tuple[str, str]:
-    """
-    Esempi supportati:
-    - analisi: quali animali vivono nella savana?
-    - storytelling: raccontami una storia su Leo
-    - quiz: fammi una domanda sugli animali pericolosi
-    """
+def parse_mode_and_prompt(user_text):
     if not user_text:
         return "analisi", ""
 
@@ -77,7 +68,6 @@ def parse_mode_and_prompt(user_text: str) -> tuple[str, str]:
     if lowered.startswith("quiz:"):
         return "quiz", text[len("quiz:"):].strip()
 
-    # default
     return "analisi", text
 
 
@@ -120,7 +110,7 @@ def build_system_prompt(mode: str) -> str:
     )
 
 
-def build_user_prompt(mode: str, user_prompt: str) -> str:
+def build_user_prompt(mode, user_prompt):
     if mode == "analisi":
         return (
             f"Domanda dell'utente: {user_prompt}\n\n"
@@ -139,7 +129,7 @@ def build_user_prompt(mode: str, user_prompt: str) -> str:
     if mode == "quiz":
         return (
             f"Richiesta quiz dell'utente: {user_prompt}\n\n"
-            "Crea un quiz in italiano. "
+            "Crea un quiz. "
             "Formato obbligatorio:\n"
             "Domanda: ...\n"
             "A) ...\n"
@@ -196,7 +186,7 @@ def ask_llm(user_text: str) -> str:
 def send_welcome(message):
     text = (
         "Ciao! 🐾\n"
-        "Sono un bot sugli animali basato su un CSV.\n\n"
+        "Sono un bot che si occupa degli animali del nostro Zoo.\n\n"
         "Modalità disponibili:\n"
         "- analisi\n"
         "- storytelling\n"
