@@ -194,6 +194,13 @@ This is achieved through **prompt specialization and role conditioning**.
 pip install openai pyTelegramBotAPI python-dotenv
 ```
 
+This project uses the Python library [pyTelegramBotAPI](https://pypi.org/project/pyTelegramBotAPI/0.3.0/) to interact with Telegram.
+
+It provides a simple interface to:
+- receive messages from users
+- define handlers for commands and text
+- send replies back to the chat
+
 ---
 
 ## 🔐 Environment Variables
